@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Titanic predictor</title>
+  </head>
+  <body>
+    <h1>Home page</h1>
+    <h3>Get your titanic predictions here</h3>
+    <p>Enter in the details of a made up person on the Titanic voyage.</p>
+    <p>We will output a prediction.</p>
+    <!-- Form:  where a person can put in the information required  -->
+    <!-- action: where does this go. When when the user click submit where, where to go.  -->
+    <form action="{% url 'result' %}">
+      <!-- In order to solve the CSRF error and to keep things secure: -->
+      {% csrf_token %}
+
+      <p>Pclass</p>
+      <input type="text" name="pclass">
+      <p>Sex</p>
+      <input type="text" name="sex">
+      <p>Age</p>
+      <input type="text" name="age">
+      <p>Sibsp</p>
+      <input type="text" name="sibsp">
+      <p>Parents/children</p>
+      <input type="text" name="parch">
+      <p>Fare</p>
+      <input type="text" name="fare">
+      <p>Embarked</p>
+      <input type="text" name="embarked">
+      <p>Title</p>
+      <input type="text" name="title">
+      <br>
+      <!-- button that user can click to send it -->
+      <input type="submit">
+      <!-- we want to  be able to output it in the second page: views.py -->
+      <!-- Now we're able to get that information and we're able to provide it to our result.html.  -->
+      <!-- Now we want to actually put it into result.html. So we put in a placeholder: result.html -->
+    </form>
+  </body>
+</html>

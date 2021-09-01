@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prediction</title>
+  </head>
+  <body>
+    <h1>Results page</h1>
+    <!-- Link from result.html to index.html -->
+    <a href="{% url 'home' %}">Click me to go to the home page</a>
+
+    <!-- Now we're able to get that information and we're able to provide it to our result.html.  -->
+    <!-- Now we want to actually put it into result.html. So we put in a placeholder: result.html -->
+    <p>Result is: </p>
+    <!-- name that we gave it -->
+    <p>{{prediction}}</p>
+
+  </body>
+</html>
