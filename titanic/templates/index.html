@@ -3,9 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Titanic predictor</title>
+    <!-- Load our static page or static folder -->
+    {% load static %}
+    <!-- Load css -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
   </head>
   <body>
     <h1>Home page</h1>
+    <!-- main.js -->
+    <button type="button" onclick="clicked()">Click me to receive an alert</button>
+
     <h3>Get your titanic predictions here</h3>
     <p>Enter in the details of a made up person on the Titanic voyage.</p>
     <p>We will output a prediction.</p>
@@ -39,5 +47,8 @@
       <!-- Now we're able to get that information and we're able to provide it to our result.html.  -->
       <!-- Now we want to actually put it into result.html. So we put in a placeholder: result.html -->
     </form>
+
+    <!-- Add JavaScript -->
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
   </body>
 </html>

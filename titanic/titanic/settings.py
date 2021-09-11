@@ -24,8 +24,8 @@ SECRET_KEY = 'django-insecure-(qgcdx$bbh4=!#-r#dntqq&jmxh3)6rp!(37!=n371%d^^aj^3
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+# IP:port, Public IPv4 address, 'unaicorn.com', 'www.unaicorn.com'
+ALLOWED_HOSTS = ['127.0.0.1:8000', '3.93.190.182', 'unaicorn.com', 'www.unaicorn.com']
 
 
 # Application definition
@@ -117,8 +117,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+import os.path
 STATIC_URL = '/static/'
+# to get the static folder working and for it to be recognized.
+STATICFILES_DIRS = (os.path.join('static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
